@@ -1,22 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { VirtualTimeScheduler } from 'rxjs';
+import { genreCreationDTO } from '../models/genres.model';
 
 @Component({
   selector: 'app-create-genre',
   templateUrl: './create-genre.component.html',
-  styleUrls: ['./create-genre.component.css']
+  styleUrls: ['./create-genre.component.css'],
 })
 export class CreateGenreComponent implements OnInit {
+  constructor(private router: Router) {}
 
-  constructor(private router: Router) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+  saveChanges(genreCreationDTO: genreCreationDTO) {
+    console.log(genreCreationDTO);
+    this.router.navigate['/genres'];
   }
-
-  saveChanges(){
-    this.router.navigate(['/genres']);
-
-  }
-
 }
