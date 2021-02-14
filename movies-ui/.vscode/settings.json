@@ -1,0 +1,5 @@
+{
+    "angular.experimental-ivy": true,
+    "angular.log": "normal",
+    "angular.trace.server": "messages"
+}

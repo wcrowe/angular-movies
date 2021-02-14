@@ -1,0 +1,17 @@
+<mat-icon
+  *ngFor="let i of maxRatingArr; let index = index"
+  (mouseenter)="handleMouseEnter(index)"
+  (mouseleave)="handleMouseLeave()"
+  (click)="rate(index)"
+  [ngClass]="{ checked: selectedRate > index }"
+
+  >star</mat-icon
+>
+
+<!-- <div class="container">
+  <h3>In Theaters</h3>
+  <app-movies-list [movies]="moviesInTheator"></app-movies-list>
+
+  <h3>Future Releases</h3>
+  <app-movies-list [movies]="moviesFutureRelease"></app-movies-list>
+</div> -->
