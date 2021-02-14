@@ -18,4 +18,5 @@ export interface movielist {
   title: string;
   releaseDate: Date;
   price: number;
+  poster : string
 }
