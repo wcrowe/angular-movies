@@ -1,6 +1,6 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { genreCreationDTO } from '../models/genres.model';
 
 
@@ -11,11 +11,8 @@ import { genreCreationDTO } from '../models/genres.model';
 })
 export class EditGenreComponent implements OnInit {
   constructor(
-    private router: Router,
     private activatedRoute: ActivatedRoute,
-    private formBuilder: FormBuilder,
-    private el: ElementRef
-  ) {}
+    private formBuilder: FormBuilder  ) {}
 
   model: genreCreationDTO = {name: 'Drama'};
   form: FormGroup;
@@ -30,13 +27,5 @@ export class EditGenreComponent implements OnInit {
   }
   saveChanges(genreCreationDTO: genreCreationDTO) {
     console.log(genreCreationDTO.name)
-    // const invalidControl = this.el.nativeElement.querySelector('.ng-invalid');
-    // if (invalidControl) {
-    //   invalidControl.focus();
-    // }
-    // if (this.form.valid) {
-    //   console.log(this.form);
-    //   this.router.navigate(['/genres']);
-    // }
   }
 }

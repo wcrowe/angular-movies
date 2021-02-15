@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { MoviesListComponent } from './movies/movies-list/movies-list.component';
 import { GenericListComponent } from './utilites/generic-list/generic-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MaterialModule } from './material/material.module';
 import { MenuComponent } from './menu/menu.component';
 import { RatingComponent } from './utilites/rating/rating.component';
@@ -24,6 +24,11 @@ import { EditMovieComponent } from './movies/edit-movie/edit-movie.component';
 import { EditMovieTheaterComponent } from './movie-theaters/edit-movie-theater/edit-movie-theater.component';
 import { EditGenreComponent } from './genres/edit-genre/edit-genre.component';
 import { FormGenreComponent } from './genres/form-genre/form-genre.component';
+import { MovieFilterComponent } from './movies/movie-filter/movie-filter.component';
+import { FormActorComponent } from './actors/form-actor/form-actor.component';
+import { InputImgComponent } from './utilites/input-img/input-img.component';
+import { InputMarkdownComponent } from './utilites/input-markdown/input-markdown.component';
+import { MarkdownModule } from 'ngx-markdown';
 
 @NgModule({
   declarations: [
@@ -46,6 +51,10 @@ import { FormGenreComponent } from './genres/form-genre/form-genre.component';
     EditMovieTheaterComponent,
     EditGenreComponent,
     FormGenreComponent,
+    MovieFilterComponent,
+    FormActorComponent,
+    InputImgComponent,
+    InputMarkdownComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,6 +62,8 @@ import { FormGenreComponent } from './genres/form-genre/form-genre.component';
     BrowserAnimationsModule,
     MaterialModule,
     ReactiveFormsModule,
+    FormsModule,
+    MarkdownModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],
