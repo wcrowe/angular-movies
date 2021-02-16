@@ -10,7 +10,12 @@ import { actorCreateDTO, actorDTO } from '../actors.model';
 export class EditActorComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute) {}
 
-  model: actorDTO= {name: "Richard Hollad", dateOfBirth: new Date(), picture: './assets/img/superhero.jpg'}
+  model: actorDTO = {
+    name: 'Richard Hollad',
+    dateOfBirth: new Date(),
+    picture: './assets/img/superhero.jpg',
+    biography: 'This is great?',
+  };
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params) => {
@@ -18,9 +23,7 @@ export class EditActorComponent implements OnInit {
     });
   }
 
-  saveChanges(actorCreateDTO: actorCreateDTO){
+  saveChanges(actorCreateDTO: actorCreateDTO) {
     console.log(actorCreateDTO);
   }
 }
-
-
