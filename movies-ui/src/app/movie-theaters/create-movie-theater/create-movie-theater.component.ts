@@ -13,8 +13,8 @@ export class CreateMovieTheaterComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  saveChanges(){
-    this.router.navigate(['/movietheaters']);
-
+  saveChanges(evnent) {
+    console.log(evnent);
+    this.router.navigate['/movie-theaters'];
   }
 }

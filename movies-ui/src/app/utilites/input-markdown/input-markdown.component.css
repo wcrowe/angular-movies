@@ -1,7 +1,14 @@
-mat-form-field{
+mat-form-field {
   width: 100%;
 }
 
-textarea{
-  height: 300px;
+textarea {
+  height: 150px;
+  display: block;
+}
+
+markdown {
+  height: 150px;
+  display: block;
+  margin-bottom: 1rem;
 }
