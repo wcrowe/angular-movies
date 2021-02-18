@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { movielist } from '../utilites/generic-list/generic-list.component';
+import { movielist } from '../utilities/generic-list/generic-list.component';
 
 @Component({
   selector: 'app-home',

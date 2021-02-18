@@ -1,6 +1,6 @@
 import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
-import { movielist } from 'src/app/utilites/generic-list/generic-list.component';
+import { movielist } from 'src/app/utilities/generic-list/generic-list.component';
 
 @Component({
   selector: 'app-movies-list',
