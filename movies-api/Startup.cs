@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 
+
 namespace movies_api
 {
     public class Startup
@@ -28,6 +29,7 @@ namespace movies_api
         {
 
             services.AddControllers();
+            services.AddSingleton< Services.IRepository, Services.InMemoryRepository >();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "movies_api", Version = "v1" });
