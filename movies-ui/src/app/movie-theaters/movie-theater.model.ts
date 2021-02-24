@@ -1,8 +1,11 @@
-export interface movieTheaterCreationDTO {
-  name: string
+export interface movieTheatersCreationDTO{
+  name: string;
+  latitude: number;
+  longitude: number;
 }
 
-export interface movieTheaterDTO {
-  name: string
-
+export interface movieTheatersDTO{
+  name: string;
+  latitude: number;
+  longitude: number;
 }

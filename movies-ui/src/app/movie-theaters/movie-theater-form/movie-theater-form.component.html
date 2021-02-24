@@ -6,8 +6,12 @@
     <mat-error *ngIf="form.invalid">{{getErrorMessageFieldName()}}</mat-error>
   </mat-form-field>
   <div>
+
     <h4>Select a location</h4>
-    <app-map></app-map>
+    <app-map
+    [initialCoordinates]="initialCoordinates"
+    (onSelectedLocation)="onSelectedLocation($event)"></app-map>
+
     <button mat-raised-button color="primary" [disabled]="form.invalid">Save Changes</button>
     <a mat-raised-button routerLink="['/movie-theaters']">Cancel</a>
   </div>

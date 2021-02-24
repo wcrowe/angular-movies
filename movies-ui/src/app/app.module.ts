@@ -7,6 +7,9 @@ import { MoviesListComponent } from './movies/movies-list/movies-list.component'
 import { GenericListComponent } from './utilities/generic-list/generic-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { MatTableModule } from '@angular/material/table';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import {DragDropModule} from '@angular/cdk/drag-drop'
 import { MaterialModule } from './material/material.module';
 import { MenuComponent } from './menu/menu.component';
 import { RatingComponent } from './utilities/rating/rating.component';
@@ -30,10 +33,13 @@ import { InputImgComponent } from './utilities/input-img/input-img.component';
 import { InputMarkdownComponent } from './utilities/input-markdown/input-markdown.component';
 import { MarkdownModule } from 'ngx-markdown';
 import { MovieTheaterFormComponent } from './movie-theaters/movie-theater-form/movie-theater-form.component';
-import {LeafletModule} from '@asymmetrik/ngx-leaflet';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { MapComponent } from './utilities/map/map.component';
 import 'leaflet/dist/images/marker-shadow.png';
 import 'leaflet/dist/images/marker-icon.png';
+import { FormMovieComponent } from './movies/form-movie/form-movie.component';
+import { MultipleSelectorComponent } from './utilities/multiple-selector/multiple-selector.component';
+import { ActorsAutocompleteComponent } from './actors/actors-autocomplete/actors-autocomplete.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +68,9 @@ import 'leaflet/dist/images/marker-icon.png';
     InputMarkdownComponent,
     MovieTheaterFormComponent,
     MapComponent,
+    FormMovieComponent,
+    MultipleSelectorComponent,
+    ActorsAutocompleteComponent,
   ],
   imports: [
     BrowserModule,
@@ -71,6 +80,9 @@ import 'leaflet/dist/images/marker-icon.png';
     ReactiveFormsModule,
     FormsModule,
     LeafletModule,
+    MatTableModule,
+    MatAutocompleteModule,
+    DragDropModule,
     MarkdownModule.forRoot(),
   ],
   providers: [],

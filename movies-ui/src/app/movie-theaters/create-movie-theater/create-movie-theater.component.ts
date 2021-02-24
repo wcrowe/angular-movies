@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { movieTheaterCreationDTO } from '../movie-theater.model';
+import { movieTheatersCreationDTO } from '../movie-theater.model';
 
 @Component({
   selector: 'app-create-movie-theater',
@@ -12,8 +12,9 @@ export class CreateMovieTheaterComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  saveChanges(movieTheaterCreationDTO: movieTheaterCreationDTO) {
+  saveChanges(movieTheaterCreationDTO: movieTheatersCreationDTO) {
     console.log(movieTheaterCreationDTO);
     this.router.navigate['/movie-theaters'];
   }
+
 }

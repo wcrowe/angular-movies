@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
-import { movieTheaterDTO } from '../movie-theater.model';
+import { movieTheatersCreationDTO, movieTheatersDTO } from '../movie-theater.model';
+
 
 @Component({
   selector: 'app-edit-movie-theater',
@@ -13,7 +14,8 @@ export class EditMovieTheaterComponent  implements OnInit {
     private activatedRoute: ActivatedRoute,
     private formBuilder: FormBuilder  ) {}
 
-  model: movieTheaterDTO = {name: 'AMC Theaters'};
+  model: movieTheatersDTO = {name: 'AMC Theaters', latitude: 27.960290, longitude: -82.803190};
+
   form: FormGroup;
 
   ngOnInit(): void {
@@ -24,8 +26,8 @@ export class EditMovieTheaterComponent  implements OnInit {
       name: ['', Validators.required],
     });
   }
-  saveChanges(movieTheaterDTO: movieTheaterDTO) {
-    console.log(movieTheaterDTO)
+  saveChanges(movieTheatersCreationDTO: movieTheatersCreationDTO) {
+    console.log(movieTheatersCreationDTO)
   }
 }
 
