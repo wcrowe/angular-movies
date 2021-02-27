@@ -7,24 +7,31 @@ namespace movies_api.Services
 
     public class InMemoryRepository : IRepository
     {
-        private List<Genres> _genres;
-        public InMemoryRepository() => _genres = new List<Genres>(){
-                new Genres(){Id=1, Name = "Comdey"},
-                new Genres(){Id=2,Name="Action"}
+        private List<Genre> _genres;
+        public InMemoryRepository() => _genres = new List<Genre>(){
+                new Genre(){Id=1, Name = "Comdey"},
+                new Genre(){Id=2,Name="Action"}
             };
 
-        public List<Genres> GetAllGenres() => _genres;
+        public List<Genre> GetAllGenres() => _genres;
 
-        public async Task<List<Genres>> GetAllGenresAsync()
+        public async Task<List<Genre>> GetAllGenresAsync()
         {
             await Task.Delay(0);
             return _genres;
         }
 
-        Genres IRepository.GetGenreById(int id)
+        public Genre GetGenreById(int id)
         {
-          return _genres.Find(x => x.Id == id);
+            return _genres.Find(x => x.Id == id);
+        }
+
+        public async Task<Genre> GetGenreByIdAsync(int id)
+        {
+            await Task.Delay(0);
+            return _genres.Find(x => x.Id == id);
+
         }
     }
-    
+
 }

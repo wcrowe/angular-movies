@@ -28,14 +28,14 @@ namespace movies_api.Controllers
         [HttpGet]
         [HttpGet("list")]
         [HttpGet("/allgenres")]
-        public async Task<ActionResult<List<Genres>>> Get()
+        public async Task<ActionResult<List<Genre>>> Get()
         {
             return await _repository.GetAllGenresAsync();
         }
 
         [HttpGet("{id}")]
-        public ActionResult<Genres> Get(int id)  { 
-            var genre = _repository.GetGenreById(id);
+        public async Task<ActionResult<Genre>> Get(int id)  { 
+            var genre = await _repository.GetGenreByIdAsync(id);
 
             if (genre == null){
                 return NotFound("Sorry, Genre was not found");
@@ -44,8 +44,8 @@ namespace movies_api.Controllers
         }
 
     [HttpPost]
-        public void Post(){
-
+        public ActionResult Post([FromBody] Genre genre){
+            return NoContent();
         }
 
         [HttpPut]
